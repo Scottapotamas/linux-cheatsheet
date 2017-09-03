@@ -33,3 +33,12 @@ To log something to file while viewing it in the terminal,
 I'm sure plenty will go here over time...
 
 eopkg is the package manager, relearn that instead of apt-get
+
+## Reading hardware sensors
+
+To read temps and fan speeds,
+
+`sudo eopkg install lm_sensors`
+
+`inxi -xs`
+
