@@ -21,6 +21,11 @@ Push to the origin/remotes:
 
 'git push'
 
+Pull the latest tarball of a repo (kicad example):
+
+`https://github.com/kicad/kicad-source-mirror/archive/master.tar.gz`
+
+
 
 # Serial Ports 
 
