@@ -108,6 +108,20 @@ To fix this, we need to install the 32-bit toolchain! The SW4 install notes do m
 
 This has been suggested before and is marked as 'ready for inclusion' as part of solus T426.
 
+# KiCAD nightly or building from source with Solus
+
+Pull the solus kicad repo from their git, and follow my notes in https://solus-project.com/forums/viewtopic.php?f=20&t=9897&p=30728#p30728.
+
+The fp-lib-table and sym-lib-tables are in /home/scott/.config/kicad.
+
+I then removed them, and symlinked them to the files in my personal kicad repos like
+
+`
+ln -sfn ~/projects/ECAD/kicad-modules/fp-lib-table ~/.config/kicad/fp-lib-table
+ln -sfn ~/projects/ECAD/kicad-library/sym-lib-table ~/.config/kicad/sym-lib-table
+`
+
+Restart kicad, ensure the .pro doesn't use absolute library references, and there is a reference to the libs path, and things should work reasonably well.
 
 # General Bash Notes
 
