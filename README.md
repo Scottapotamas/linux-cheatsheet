@@ -112,14 +112,18 @@ This has been suggested before and is marked as 'ready for inclusion' as part of
 
 Pull the solus kicad repo from their git, and follow my notes in https://solus-project.com/forums/viewtopic.php?f=20&t=9897&p=30728#p30728.
 
+# KiCAD to use libraries from my own git repos
+
 The fp-lib-table and sym-lib-tables are in /home/scott/.config/kicad.
 
 I then removed them, and symlinked them to the files in my personal kicad repos like
 
 `
-ln -sfn ~/projects/ECAD/kicad-modules/fp-lib-table ~/.config/kicad/fp-lib-table
-ln -sfn ~/projects/ECAD/kicad-library/sym-lib-table ~/.config/kicad/sym-lib-table
+ln -sfn ~/projects/ECAD/appli-modules/fp-lib-table ~/.config/kicad/fp-lib-table 
+
+ln -sfn ~/projects/ECAD/appli-library/sym-lib-table ~/.config/kicad/sym-lib-table
 `
+
 
 Restart kicad, ensure the .pro doesn't use absolute library references, and there is a reference to the libs path, and things should work reasonably well.
 
@@ -141,10 +145,13 @@ I'm sure plenty will go here over time...
 
 eopkg is the package manager, relearn that instead of apt-get.
 
+`
+eopkg it
+`
+
 ## Stuff in the package manager that is nice
 
 alacarte does menu configuration.
-
 
 
 
