@@ -11,15 +11,17 @@ Checkout:
 
 Add files to staging:
 
-'git add README.txt'
+`git add README.txt`
+
+`git add .` adds all unstaged files.
 
 Create a commit:
 
-'git commit -m "A useful message goes here"`
+`git commit -m "A useful message goes here"`
 
 Push to the origin/remotes:
 
-'git push'
+`git push`
 
 Pull the latest tarball of a repo (kicad example):
 
@@ -29,17 +31,34 @@ Pull the latest tarball of a repo (kicad example):
 
 # Serial Ports 
 
+## Identifying devices
+
 To find out what port some hardware might be on, use
 
 `dmesg | grep tty`
 
 Then work out what /dev/ttyUSB or whatever its on.
 
+## Picocom
+
 If using picocom, then do something like
 
 `picocom -b 115200 /dev/ttyUSB0`
 
 Then to quit a picocom session, CTRL+a then CTRL+x
+
+## Screen
+
+If `screen` is available, you can connect to a device, and use the -L to log data to a file in the working directory.
+
+`screen -L /dev/ttyUSB0 115200`
+
+As usual with screen:
+
+- ctrl+a ctrl+d to detatch (but it will keep running in the background.
+- ctrl+a ctrl+k to kill the instance.
+
+Works on MacOS as well.
 
 # Arduino IDE
 
@@ -152,7 +171,6 @@ eopkg it
 ## Stuff in the package manager that is nice
 
 alacarte does menu configuration.
-
 
 
 ## Reading hardware sensors
