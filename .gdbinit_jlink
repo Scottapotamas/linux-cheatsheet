@@ -1,0 +1,11 @@
+# J-LINK GDB SERVER initialization
+
+# Reset the chip to get to a known state.
+define target hookpost-remote
+load
+monitor reset
+monitor halt
+b main
+
+# Set auto JTAG speed
+monitor speed auto
